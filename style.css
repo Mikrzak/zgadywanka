@@ -1,0 +1,65 @@
+.leaflet-container.crosshair-cursor-enabled {
+    cursor:crosshair;
+}
+
+#titleText{
+    text-align: center;
+    font-size: 75px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#townText{
+    text-align: center;
+    font-size: 45px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#guessInfoText{
+    text-align: left;
+    font-size: 45px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#townInfoText{
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    word-wrap: break-word;
+    top: 100px;
+    font-size: 35px;
+    width: 500px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#mapToggles{
+    justify-content: center;
+    display: flex;
+}
+#modeToggles{
+    justify-content: center;
+    display: flex;
+}
+
+.mapToggle + .mapToggle {
+    margin-left: 50px;
+}
+
+.modeToggle + .modeToggle {
+    margin-left: 100px;
+}
+
+#buttonDiv{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    margin: 20px;
+}
