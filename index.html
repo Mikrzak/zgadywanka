@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Zgadywanka</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -22,17 +22,27 @@
         <input class="mapToggle" type="radio" name="mapToggle" value="2" id="mapToggle2">✅Kontury ❌Nazwy (+30% pkt)
         <input class="mapToggle" type="radio" name="mapToggle" value="3" id="mapToggle3" checked="true">✅Kontury ✅Nazwy (+0% pkt)
     </div>
-    <br><br><br><br>
+    <!-- <br><br><br><br> -->
     <div id="modeToggles">
         <input class="modeToggle" type="radio" name="modeToggle" value="1" id="modeToggle1">Tryb 1 szansa (+40% pkt)</button>
-        <input class="modeToggle" type="radio" name="modeToggle" value="2" id="modeToggle2" checked="true">Tryb 2 szanse (+20% pkt)</button>
-        <input class="modeToggle" type="radio" name="modeToggle" value="3" id="modeToggle3">Tryb 3 szanse (+0% pkt)</button>
+        <input class="modeToggle" type="radio" name="modeToggle" value="2" id="modeToggle2">Tryb 2 szanse (+20% pkt)</button>
+        <input class="modeToggle" type="radio" name="modeToggle" value="3" id="modeToggle3" checked="true">Tryb 3 szanse (+0% pkt)</button>
     </div>
-    <br><br><br><br>
+    <!-- <br><br><br><br> -->
+    <div id="sliderDiv">
+        <input type="range" value="5" min="1" max="10" id="roundsRange">
+        <label id="roundsRangeLabel">liczba rund: 5</label>
+    </div>
+    <div id="inputDiv">
+        <input type="text" id="idInput">
+        <label id="roundsRangeLabel"> Id gry</label>
+    </div>
     <div id="buttonDiv">
-        <button class="playButton" id="playButton" onclick="StartGame()">Graj</button>
+        <button class="playButton" id="playButton" onclick="StartGame(true)">Graj</button>
+        <button class="refreshButton" id="refreshButton" onclick="location.reload()" style="display: none;">Menu główne</button>
     </div>
     <script src="data.js"></script>
     <script src="index.js"></script>
+    <script src="menuScript.js"></script>
 </body>
 </html>
