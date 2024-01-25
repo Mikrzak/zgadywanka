@@ -44,11 +44,12 @@ function ResetGame(){
     townIdArray = [];
 
     document.getElementById("map").style.setProperty("display","block");
-    document.getElementById("map").style.setProperty("justify-content","center");
+    // document.getElementById("map").style.setProperty("justify-content","center");
     document.getElementById("mapToggles").style.setProperty("display","none");
     document.getElementById("modeToggles").style.setProperty("display","none");
     document.getElementById("titleText").style.setProperty("display","none");
     document.getElementById("refreshButton").style.setProperty("display","none");
+    document.getElementById("menuDiv").style.setProperty("display","none");
 
     document.getElementById("playButton").setAttribute("onClick", "StartGame()" );
     document.getElementById("playButton").innerText = "Następna runda";
@@ -115,13 +116,16 @@ function StartGame(reset){
     var townLat = uniqueTownArray[index].Latitude;
     var townLon = uniqueTownArray[index].Longitude;
 
+    var zoom = 6.5;
+    //console.log(document.getElementById("map").clientWidth)
+
     try{
-        map = L.map("map", {minZoom:6.5, maxZoom:6.5}).setView([52.06880141131436, 19.479684688924113], 6.5);
+        map = L.map("map", {minZoom:zoom, maxZoom:zoom}).setView([52.06880141131436, 19.479684688924113], zoom);
     }
     catch{
         map = map.remove();
-        map = L.map("map", {minZoom:6.5, maxZoom:6.5}).setView([52.06880141131436, 19.479684688924113], 6.5);
-        map.setView([52.06880141131436, 19.479684688924113], 6.5);
+        map = L.map("map", {minZoom:zoom, maxZoom:zoom}).setView([52.06880141131436, 19.479684688924113], zoom);
+        map.setView([52.06880141131436, 19.479684688924113], zoom);
         layerGroup.clearLayers();
         document.getElementById("guessInfoText").innerText = "";
         document.getElementById("townInfoText").innerText = "";
@@ -260,6 +264,7 @@ function StartGame(reset){
             
             saveTownIdArray.push(uniqueTownArray[index].Id);
 
+            document.getElementById("buttonDiv").style = "position: absolute; top: " + (document.getElementById("guessInfoText").getBoundingClientRect().height + document.getElementById("guessInfoText").getBoundingClientRect().y) + "px;";
             document.getElementById("buttonDiv").style.setProperty("display","block");
 
             if(rounds == 0){

@@ -13,29 +13,33 @@
 </head>
 <body>
     <p id="titleText" style="display:block">Zgadnij miejscowość</p>
-    <div id="map" style="height: 700px; width: 700px; display:none; position: absolute; left: 50%; margin-left: -350px; margin-top: 100px;"></div>
     <p id="townText"></p>
-    <p id="guessInfoText"></p>
-    <p id="townInfoText"></p>
-    <div id="mapToggles">
-        <input class="mapToggle" type="radio" name="mapToggle" value="1" id="mapToggle1">❌Kontury ❌Nazwy (+50% pkt)
-        <input class="mapToggle" type="radio" name="mapToggle" value="2" id="mapToggle2">✅Kontury ❌Nazwy (+30% pkt)
-        <input class="mapToggle" type="radio" name="mapToggle" value="3" id="mapToggle3" checked="true">✅Kontury ✅Nazwy (+0% pkt)
+    <div id="gameLayout">
+        <p id="guessInfoText"></p>
+        <div id="map" style="height: 35vw; width: 35vw; display:none;"></div>
+        <p id="townInfoText"></p>
     </div>
-    <!-- <br><br><br><br> -->
-    <div id="modeToggles">
-        <input class="modeToggle" type="radio" name="modeToggle" value="1" id="modeToggle1">Tryb 1 szansa (+40% pkt)</button>
-        <input class="modeToggle" type="radio" name="modeToggle" value="2" id="modeToggle2">Tryb 2 szanse (+20% pkt)</button>
-        <input class="modeToggle" type="radio" name="modeToggle" value="3" id="modeToggle3" checked="true">Tryb 3 szanse (+0% pkt)</button>
-    </div>
-    <!-- <br><br><br><br> -->
-    <div id="sliderDiv">
-        <input type="range" value="5" min="1" max="10" id="roundsRange">
-        <label id="roundsRangeLabel">liczba rund: 5</label>
-    </div>
-    <div id="inputDiv">
-        <input type="text" id="idInput">
-        <label id="roundsRangeLabel"> Id gry</label>
+    <div id="menuDiv">
+        <div id="mapToggles">
+            <input class="mapToggle" type="radio" name="mapToggle" value="1" id="mapToggle1">❌Kontury ❌Nazwy (+50% pkt)
+            <input class="mapToggle" type="radio" name="mapToggle" value="2" id="mapToggle2">✅Kontury ❌Nazwy (+30% pkt)
+            <input class="mapToggle" type="radio" name="mapToggle" value="3" id="mapToggle3" checked="true">✅Kontury ✅Nazwy (+0% pkt)
+        </div>
+        <!-- <br><br><br><br> -->
+        <div id="modeToggles">
+            <input class="modeToggle" type="radio" name="modeToggle" value="1" id="modeToggle1">Tryb 1 szansa (+40% pkt)</button>
+            <input class="modeToggle" type="radio" name="modeToggle" value="2" id="modeToggle2">Tryb 2 szanse (+20% pkt)</button>
+            <input class="modeToggle" type="radio" name="modeToggle" value="3" id="modeToggle3" checked="true">Tryb 3 szanse (+0% pkt)</button>
+        </div>
+        <!-- <br><br><br><br> -->
+        <div id="sliderDiv">
+            <input type="range" value="5" min="1" max="10" id="roundsRange">
+            <label id="roundsRangeLabel">liczba rund: 5</label>
+        </div>
+        <div id="inputDiv">
+            <input type="text" id="idInput">
+            <label id="idLabel"> Id gry</label>
+        </div>
     </div>
     <div id="buttonDiv">
         <button class="playButton" id="playButton" onclick="StartGame(true)">Graj</button>
